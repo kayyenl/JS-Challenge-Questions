@@ -106,10 +106,53 @@ function stringToArrayRevThenString(string) {
 
 function convertToZeros(array) {
     let returnarr = []
-    for (let i = 0; i < array.length; i++) array.push(0)
+    for (let i = 0; i < array.length; i++) returnarr.push(0)
     return returnarr
 }
 
-console.log(convertToZeros([5,100,0]))
-console.log(convertToZeros([12]))
-console.log(convertToZeros([1,2,3,4,5]))
+// console.log(convertToZeros([5,100,0]))
+// console.log(convertToZeros([12]))
+// console.log(convertToZeros([1,2,3,4,5]))
+
+function convertToZerosMap(array) {
+    let returnarr = array.map(elem => 0) //there is an invisible return with the 0.
+    return returnarr
+}
+
+// console.log(convertToZerosMap([5,100,0]))
+// console.log(convertToZerosMap([12]))
+// console.log(convertToZerosMap([1,2,3,4,5]))
+
+function removeApplesFor(array) {
+    let returnarr = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== "Apple") returnarr.push(array[i])
+    }
+    return returnarr
+}
+
+// console.log(removeApplesFor(['Banana', 'Apple', 'Orange', 'Apple']))
+// console.log(removeApplesFor(['Tomato', 'Orange', 'Banana']))
+// console.log(removeApplesFor(['Banana', 'Orange', 'Apple']))
+
+function removeApples(array) {
+    return returnarr = array.filter(elem => elem !== 'Apple')
+}
+
+// console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple']))
+// console.log(removeApples(['Tomato', 'Orange', 'Banana']))
+// console.log(removeApples(['Banana', 'Orange', 'Apple']))
+
+function filterFalsy(array) {
+    return returnarr = array.filter(elem => elem)
+}
+
+// console.log(filterFalsy(["", [], 0, null, undefined, "0"])) //empty array is a true value
+// console.log(filterFalsy(["Tomato", "Orange", "Banana", false]))
+// console.log(filterFalsy(["Banana", "Orange", "Apple"]))
+
+function convertToBoolean(array) {
+    return returnarr = array.map(elem => !!elem) //or just !!elem. ! changes it to boolean values
+}
+
+// console.log(convertToBoolean([500, 0, "David", "", []]))
