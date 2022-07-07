@@ -40,3 +40,4 @@ function isLoggedInOrSubscribed(login, sub) {
 // console.log(isLoggedInOrSubscribed('LOGGED_IN', 'UNSUBSCRIBED'))
 // console.log(isLoggedInOrSubscribed('LOGGED_OUT', 'SUBSCRIBED'))
 // console.log(isLoggedInOrSubscribed('LOGGED_OUT', 'UNSUBSCRIBED'))
+
