@@ -74,6 +74,32 @@ async function postsByUserReal(userId) {
     console.log(resultarr)
 } 
 
-console.log(oosts)
+console.log(postsByUserReal(4))
 
 //the awaits in the lines are for teh bottom lines to WAIT
+
+
+async function firstSixIncomplete() {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos")
+    const result = await promise.json()
+    let counter = 0
+    let resultarr = []
+    for (let i = 0; i < result.length; i++) {
+        if (result[i].completed === false) {
+            counter += 1
+            resultarr.push(result[i])
+        }
+        if (counter === 6) break
+    }
+    console.log(resultarr)
+}
+
+async function firstSixIncompleteShort() {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/todos")
+    const result = await promise.json()
+    const incomplete = result.filter(elem => !elem.completed).slice(0,6)
+    console.log(incomplete)
+}
+
+console.log(firstSixIncomplete())
+console.log(firstSixIncompleteShort())
