@@ -74,7 +74,7 @@ async function postsByUserReal(userId) {
     console.log(resultarr)
 } 
 
-console.log(postsByUserReal(4))
+// console.log(postsByUserReal(4))
 
 //the awaits in the lines are for teh bottom lines to WAIT
 
@@ -101,5 +101,12 @@ async function firstSixIncompleteShort() {
     console.log(incomplete)
 }
 
-console.log(firstSixIncomplete())
-console.log(firstSixIncompleteShort())
+// console.log(firstSixIncomplete())
+// console.log(firstSixIncompleteShort())
+
+async function tryingReturn () {
+    const value = 5*4
+    return value
+}
+
+console.log(tryingReturn())
