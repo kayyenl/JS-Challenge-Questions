@@ -48,9 +48,32 @@ function sortHighToLow(array) {
     return array.sort((a, b) => b.price - a.price)
 }
 
-console.log(sortHighToLow([
-    {id: 1, price: 50},
-    {id: 2, price: 30},
-    {id: 3, price: 60},
-    {id: 4, price: 10}
-]))
+// console.log(sortHighToLow([
+//     {id: 1, price: 50},
+//     {id: 2, price: 30},
+//     {id: 3, price: 60},
+//     {id: 4, price: 10}
+// ]))
+
+function postsByUser(userId) {
+    const result = fetch("https://jsonplaceholder.typicode.com/posts")
+    console.log(result)
+}
+
+async function postsByUser(userId) {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/posts") //gives you backend stuff
+    console.log(await promise.json()) //changes from backend to frontend
+} 
+
+//FETCH always needs to be converted to ENGLISH!! convert to .json().
+
+async function postsByUserReal(userId) {
+    const promise = await fetch("https://jsonplaceholder.typicode.com/posts") 
+    const result = await promise.json()
+    const resultarr = result.filter(elem => elem.userId === userId)
+    console.log(resultarr)
+} 
+
+console.log(oosts)
+
+//the awaits in the lines are for teh bottom lines to WAIT
